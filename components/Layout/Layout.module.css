@@ -1,0 +1,51 @@
+.wall {
+    background-color: #fff;
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    padding: 170px 150px 170px 150px;
+    gap: 200px;
+}
+
+.frame {
+    text-align: start;
+    flex-basis: 100%;
+    padding: 0px;
+    margin: 0px;
+    display: block;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 576px) {
+
+    .wall {
+        width: 100%;
+        height: fit-content;
+        display: block;
+        padding: 120px 30px 80px 30px;
+        gap: 70px;
+    }
+    
+    .frame {
+        flex-basis: 100%;
+        padding: 0px;
+        margin: 0px;
+        display: block;
+    } 
+
+}
+
+@media only screen and (min-width: 577px) and (max-width: 992px) {
+
+    .wall {
+        padding: 120px 60px 120px 60px;
+    }
+
+}
+
+@media only screen and (min-width: 993px) and (max-width: 1440px) {
+
+    .wall {
+        padding: 40px 40px 40px 40px;
+    }
+
+}
