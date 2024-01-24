@@ -59,7 +59,7 @@
 
         const  postSearchHistory = useCallback(async (randomId) => {
             try {
-                const res = await fetch(`http://localhost:3000/api/searches/${randomId}`, {
+                const res = await fetch(`/api/searches/${randomId}`, {
                     method: 'POST',
                     headers: {
                         'Content-type': 'application/json'
@@ -80,7 +80,7 @@
 
         const getSearchedHistory = useCallback(async (randomId) => {
             try {
-                const res = await fetch(`http://localhost:3000/api/searches/${randomId}`, {
+                const res = await fetch(`/api/searches/${randomId}`, {
                     method: 'GET',
                     headers: {
                         'Content-type': 'application/json'
