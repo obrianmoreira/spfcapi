@@ -2,7 +2,7 @@ import {collection, doc, setDoc} from 'firebase/firestore'
 import { database } from './database';
 import { redirect } from 'next/dist/server/api-utils';
 
-async function CreateHistories(dateContent, titleHistory, subTitleHistory, descriptionHistory) {
+async function CreateHistories(titleHistory, subTitleHistory, descriptionHistory) {
     try {
         const dbInstance = collection(database, 'histories');
         await setDoc(doc(dbInstance), {
@@ -12,7 +12,7 @@ async function CreateHistories(dateContent, titleHistory, subTitleHistory, descr
                 descriptionHistory: descriptionHistory,
             }
         }).then(() => {
-            console.log(dateContent);
+            console.log('uhuhuh nice!');
         });
     } catch (error) {
         console.log(error);

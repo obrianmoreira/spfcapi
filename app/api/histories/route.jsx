@@ -4,12 +4,10 @@ import { ReadHistories } from "../../controllers/database/read";
 export async function POST(request){
     const data = await request.json();
     const {histories} = data;
-    const typeData = histories.dateContent.typeData;
-    const decidedData = histories.dateContent.dateContent;
     const titleHistory = histories.dateContent.titleHistory;
     const subTitleHistory = histories.dateContent.subTitleHistory;
     const descriptionHistory = histories.dateContent.descriptionHistory;
-    CreateHistories(typeData, decidedData, titleHistory, subTitleHistory, descriptionHistory);
+    CreateHistories(titleHistory, subTitleHistory, descriptionHistory);
     return Response.json('Correctly done');
 }
 
